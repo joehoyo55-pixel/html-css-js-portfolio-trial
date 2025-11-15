@@ -1,0 +1,433 @@
+/* GENERAL */
+
+@import url('https://fonts.googleapis.com/css2?family=Special+Gothic+Condensed+One&family=Special+Gothic+Expanded+One&family=Special+Gothic:wght@400..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Special Gothic Condensed One", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+    color: rgb(85, 85, 85)
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    text-decoration: white;
+}
+
+/* TRANSITION */
+a,
+.button {
+    transition: all 300ms ease;
+}
+
+/* DESKTOP NAV */
+
+nav, .nav-links {
+    display: flex;
+}
+
+nav {
+    background-color: white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0;
+    padding: 2rem 0;
+    flex-direction: column;
+    height: auto
+}
+
+.nav-links {
+    display: flex;
+    gap: 0rem;
+    list-style: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-size: 3rem;
+    font-weight: bold;
+    transform: translateY(0px);
+}
+
+.contact-link:hover {
+    color: rgb(0, 65, 133);
+}
+
+.work-link:hover {
+    color: rgb(255, 240, 1);
+}
+
+.reel-link:hover {
+    color: rgb(233, 50, 19);
+}
+
+/* LINKEDIN BUTTON */
+
+.linkedin-fixed-button {
+    position: fixed;
+    bottom: 1.5rem;
+    left: 1.7rem;
+    z-index: 1000; 
+}
+
+.linkedin-fixed-button img {
+    width: 40px;
+    height: auto;
+    transition: transform 0.2s ease-in-out;
+}
+
+.linkedin-fixed-button:hover img {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
+/* BACK TO TOP */
+
+.backtotop-button {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    width: 40px;
+    height: 40px;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+/* Backtotop JavaScript */
+.backtotop-button.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.backtotop-button img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* TITLE */
+
+/* title cursor */
+.title:hover {
+    cursor: help;
+}
+
+.title-contact:hover {
+    cursor: pointer;
+}
+
+/* Title behaviour */
+
+.section__pic-container-1 {
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
+
+/* title gif */
+
+.title-wrapper {
+    position: relative;
+    overflow: visible;
+    width: 100%;
+    max-width: 800px;
+}
+
+.title-gif {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 190%;
+    height: auto;
+    transform: translate(-75px, -100px); 
+    z-index: 0;
+    pointer-events: none;
+    opacity: 0; 
+    transition: opacity 0.4s ease; 
+}
+
+.title-static {
+    position: relative;
+    z-index: 1;
+    display: block;
+    width: 100%;
+}
+
+/* hover gif fade-in */
+.section__pic-container-1:hover .title-gif {
+  opacity: 1;
+}
+
+
+/* PICTURE */
+
+.bottom-picture {
+    display: none; /* this was flex before */
+    justify-content: center;
+    align-items: center;
+    height: 0;
+    transform: translate(300px, -53px);
+}
+
+.bottom-picture:hover {
+    cursor: no-drop;
+}
+
+.section__pic-container-2 img {
+    width: 100%;
+    max-width: 600px; 
+    height: auto;
+    display: block;
+}
+
+/* DIVIDER */
+
+.divider {
+    display: flex;
+    border: none;
+    margin-top: 6rem;
+    margin-bottom: 0rem;
+    height: 2px;
+    background-color: black;
+    width: 80%;
+    transform: translateY(0px);
+}
+
+/* SECTIONS */
+
+/* HOME SECTION */
+.section__text_p1 {
+    display: flex;
+    font-size: 1rem;
+    white-space: nowarp;
+    margin-top: 0rem;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    width: 100%;
+}
+
+.section__text_p1::after {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    content: " motion graphics designer motion graphics designer motion graphics designer motion graphics designer motion graphics designer motion graphics designer motion graphics designer motion graphics designer motion graphics designer motion graphics designer motion graphics designer "
+}
+
+/* CONTACT SECTION */
+.section__text_p2 {
+    display: flex;
+    font-size: 1rem;
+    white-space: nowarp;
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+    padding: 0;
+    overflow: hidden;
+    width: 100%;
+}
+
+.section__text_p2::after {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    content: " contact contact contact contact contact contact contact contact contact contact contact contact contact contact contact contact contact contact contact contact contact contact contact contact contact contact contact contact contact contact contact contact contact contact "
+}
+
+/* email */
+
+#contact__text {
+    display: flex;
+    font-size: 3rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    padding: 0;
+}
+
+.text__email {
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.text__email::after {
+    white-space: pre;
+    content: "joehoyo55@gmail.com\Ajoehoyo55@gmail.com\Ajoehoyo55@gmail.com\Ajoehoyo55@gmail.com\Ajoehoyo55@gmail.com\Ajoehoyo55@gmail.com\Ajoehoyo55@gmail.com\Ajoehoyo55@gmail.com\Ajoehoyo55@gmail.com\Ajoehoyo55@gmail.com\Ajoehoyo55@gmail.com\Ajoehoyo55@gmail.com\Ajust e-mail me already\Ajust e-mail me already\Ajust e-mail me already\A";
+    display: block;
+    
+}
+
+#copy-message {
+    position: fixed;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    z-index: 9999;
+
+  /* visual */
+    background: rgba(0,0,0,0.8);
+    color: white;
+    padding: 0.35rem 0.7rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-style: italic;
+
+    opacity: 0;
+    transform: translate(-50%, -40%);
+    transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+#copy-message.show {
+    opacity: 1;
+    background: rgba(255, 0, 0, 0.1);
+}
+
+/* WORK SECTION */
+.section__text_p3 {
+    display: flex;
+    font-size: 1rem;
+    white-space: nowarp;
+    margin-top: 0rem;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    width: 100%;
+}
+
+.section__text_p3::after {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    content: " work work work work work work work work work work work work work work work work work work work work work work work work work work work work work work work work work work work work work work work work work work work work work work work work work work work work work  "
+}
+
+#video-gallery {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 1rem;
+    width: 90%;
+    max-width: 1500px;
+}
+
+/* Each video tile */
+.video-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    aspect-ratio: 9 / 16;
+    background: #000;
+}
+
+/* Videos or placeholders */
+.video-item video,
+.video-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    border-radius: inherit;
+}
+
+/* Hover effect */
+.video-item:hover video,
+.video-item:hover img {
+    transform: scale(1.05);
+    filter: brightness(1.15);
+}
+
+/* Fade-in animation for new items */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 3s ease forwards;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+/* REEL SECTION */
+.section__text_p4 {
+    display: flex;
+    font-size: 1rem;
+    white-space: nowarp;
+    margin-top: 0rem;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    width: 100%;
+}
+
+.section__text_p4::after {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    content: " reel reel reel reel reel reel reel reel reel reel reel reel reel reel reel reel reel reel reel reel reel reel reel reel reel reel reel reel reel reel reel reel reel reel reel reel reel reel reel reel reel reel reel reel reel reel reel reel reel reel reel reel reel reel reel reel reel reel reel reel reel reel reel reel reel reel reel "
+}
+
+#work__text {
+    display: flex;
+    font-size: 3rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0rem;
+    margin-bottom: 1rem;
+}
+
+.video-container, 
+.reel-video {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    max-width: 1000px;
+    aspect-ratio: 16 / 9;
+}
+
+.video-container iframe,
+.reel-video {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    display: block;
+}
+
+/* FOOTER */
+
+footer {
+    height: 0vh;
+    margin: 0 1rem;
+}
+
+footer p {
+    text-align: center;
+}
