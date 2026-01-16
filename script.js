@@ -1,6 +1,6 @@
 //Copied to clipboard
 function copyEmail(event) {
-  const email = "joehoyo55@gmail.com";
+  const email = "joehoyoworks@gmail.com";
   const message = document.getElementById("copy-message");
 
   navigator.clipboard.writeText(email).then(() => {
